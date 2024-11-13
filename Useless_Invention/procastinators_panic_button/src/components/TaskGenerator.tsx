@@ -1,46 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const buzzwords = [
-  "synergizing",
-  "leveraging",
-  "optimizing",
-  "implementing",
-  "strategizing",
-  "innovating",
-  "disrupting",
-  "streamlining",
-  "revolutionizing",
-  "transforming",
+  'synergizing', 'leveraging', 'optimizing', 'implementing', 'strategizing',
+  'innovating', 'disrupting', 'streamlining', 'revolutionizing', 'transforming'
 ];
 
 const subjects = [
-  "cross-platform initiatives",
-  "paradigm shifts",
-  "core competencies",
-  "best practices",
-  "growth strategies",
-  "digital transformations",
-  "value propositions",
-  "market dynamics",
-  "customer experiences",
-  "business ecosystems",
+  'cross-platform initiatives', 'paradigm shifts', 'core competencies',
+  'best practices', 'growth strategies', 'digital transformations',
+  'value propositions', 'market dynamics', 'customer experiences',
+  'business ecosystems'
 ];
 
 const outcomes = [
-  "maximize ROI",
-  "drive engagement",
-  "enhance productivity",
-  "accelerate growth",
-  "ensure compliance",
-  "optimize performance",
-  "foster innovation",
-  "scale operations",
-  "boost efficiency",
-  "achieve synergy",
+  'maximize ROI', 'drive engagement', 'enhance productivity',
+  'accelerate growth', 'ensure compliance', 'optimize performance',
+  'foster innovation', 'scale operations', 'boost efficiency',
+  'achieve synergy'
 ];
 
 export const TaskGenerator: React.FC = () => {
-  const [task, setTask] = useState("");
+  const [task, setTask] = useState('');
 
   const generateTask = () => {
     const buzzword = buzzwords[Math.floor(Math.random() * buzzwords.length)];

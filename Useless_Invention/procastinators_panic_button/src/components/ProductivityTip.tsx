@@ -1,47 +1,47 @@
-import React, { useState, useEffect } from "react";
-import { LightbulbIcon } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import { LightbulbIcon } from 'lucide-react';
 
 const productivityTips = [
   {
     tip: "Try the 2-minute rule: If it takes less than 2 minutes, do it now.",
-    category: "Time Management",
+    category: "Time Management"
   },
   {
     tip: "Break large tasks into smaller, manageable chunks.",
-    category: "Task Management",
+    category: "Task Management"
   },
   {
     tip: "Use the Pomodoro Technique: 25 minutes of focus, then a 5-minute break.",
-    category: "Focus",
+    category: "Focus"
   },
   {
     tip: "Remove distractions before starting important tasks.",
-    category: "Environment",
+    category: "Environment"
   },
   {
     tip: "Start your day by completing your most challenging task.",
-    category: "Planning",
+    category: "Planning"
   },
   {
     tip: "Take regular breaks to maintain mental freshness.",
-    category: "Wellbeing",
+    category: "Wellbeing"
   },
   {
     tip: "Set specific goals instead of vague objectives.",
-    category: "Goal Setting",
+    category: "Goal Setting"
   },
   {
     tip: "Keep a done list alongside your to-do list.",
-    category: "Motivation",
+    category: "Motivation"
   },
   {
     tip: "Schedule your tasks based on your energy levels throughout the day.",
-    category: "Energy Management",
+    category: "Energy Management"
   },
   {
     tip: "Practice mindfulness to improve focus and reduce stress.",
-    category: "Mental Health",
-  },
+    category: "Mental Health"
+  }
 ];
 
 export const ProductivityTip: React.FC = () => {
@@ -49,8 +49,9 @@ export const ProductivityTip: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const randomTip =
-        productivityTips[Math.floor(Math.random() * productivityTips.length)];
+      const randomTip = productivityTips[
+        Math.floor(Math.random() * productivityTips.length)
+      ];
       setCurrentTip(randomTip);
     }, 5000);
     return () => clearInterval(interval);
@@ -67,6 +68,9 @@ export const ProductivityTip: React.FC = () => {
           </span>
         </div>
       </div>
+      <p className="text-sm text-slate-500 italic">
+        * Sneakily providing actual useful advice every 5 seconds...
+      </p>
     </div>
   );
 };
